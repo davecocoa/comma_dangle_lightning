@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Comma Dangle</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section class="test">
+        <h1>Is this working properly? Press P to play, refresh the page to start again</h1>
+      </section>
+      <section>
+        <h1>Comma Dangle</h1>
+        <h2>David McMullin</h2><img src="images/cocoa.jpg" class="avatar">
+        <h4>@davecocoa7 / davecocoa</h4>
+      </section>
+      <section>
+        <h1>Comma Dangle</h1>
+        <pre><code class="language-javascript">var someNiceThings = [
+  'JavaScript',
+  'Regex',
+  'Kittens',
+]
+</code></pre>
+      </section>
+      <section class="slippery">
+        <h1>Slippery Slope?</h1>
+        <pre><code class="language-javascript">var someNiceThings = [
+  'JavaScript',
+  'Regex',
+  'Kittens',
+]
+</code></pre>
+      </section>
+      <section>
+        <h1>Whatever, my codebase is too large and old!</h1>
+        <h2 class="error">✖ 576 problems (472 errors, 104 warnings)</h2>
+      </section>
+      <section>
+        <h1>Regex?</h1>
+        <pre><code>/([^}\],]*)\s*([}\]])/</code></pre>
+      </section>
+      <section class="nope">
+        <h1>NOPE</h1>
+        <pre><code class="language-javascript">var someNiceThings = [
+  'JavaScript',
+  'Regex',
+  'Kittens',
+]
+</code></pre>
+      </section>
+      <section>
+        <h1>More code!</h1>
+        <pre><code class="language-javascript">var fs = require('fs')
+
+require('./eslintout.json').forEach(function(f){
+  fs.readFile(f.filePath, function(err, data){
+    lines = data.toString().split('\n')
+    
+    f.messages.forEach(function(line){
+      lines[line.line-1] = lines[line.line-1] + ','
+    })
+    
+    fs.writeFile(f.filePath, lines.join('\n'))
+  })
+})
+</code></pre>
+      </section>
+      <section>
+        <h1>Further Reading</h1>
+        <h2><a href="http://eslint.org/docs/rules/comma-dangle.html">http://eslint.org/docs/rules/comma-dangle.html</a></h2>
+        <h2><a href="https://github.com/airbnb/javascript#19.2">https://github.com/airbnb/javascript#19.2</a></h2>
+      </section>
+      <section>
+        <h1>Thank you!</h1>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
