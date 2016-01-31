@@ -11,57 +11,81 @@ html
 
     article
 
+      section.test
+        h1 Is this working properly? Press P to play, refresh the page to start again
+
       section
         h1 Comma Dangle
+        h2 David McMullin
+        img.avatar(src='images/cocoa.jpg')
+        h4 @davecocoa7 / davecocoa
 
       section
-        h2 Keyboard Interaction
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-keys">bespoke-keys</a>
-
-      section
-        h2 Touch Interaction
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-touch">bespoke-touch</a>
-
-      section
-        h2 Responsive Slides
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a>
-
-      section
-        h2 Bullet List
-        h3.bullet Powered by <a href="https://github.com/markdalgleish/bespoke-bullets">bespoke-bullets</a>
-        ul
-          li Bullet 1
-          li Bullet 2
-          li Bullet 3
-
-      section
-        h2 Syntax Highlighting
-        h3 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
+        h1 Comma Dangle
         pre
           code.language-javascript.
-            bespoke.from('article', [
-              classes(),
-              keys(),
-              touch(),
-              bullets('li, .bullet')
-            ]);
+            var someNiceThings = [
+              'JavaScript',
+              'Regex',
+              'Kittens',
+            ]
 
-      section(data-bespoke-hash='named-route')
-        h2 Named Route
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
-        p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
+      section.slippery
+        h1 Slippery Slope?
+        pre
+          code.language-javascript.
+            var someNiceThings = [
+              'JavaScript',
+              'Regex',
+              'Kittens',
+            ]
 
       section
-        h2.bullet Just the beginning...
-        br
-        ul
-          li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
-          li Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
-          li Edit JavaScript in <em>'src/scripts/main.js'</em>
-        br
-        ul
-          li
-            strong Enjoy! :)
-            a(href='http://twitter.com/markdalgleish')  -@markdalgleish
+        h1 Whatever, my codebase is too large and old!
+        h2.error ✖ 576 problems (472 errors, 104 warnings)
+
+      section
+        h1 Regex?
+        pre
+          code
+            /([^}\],]*)\s*([}\]])/
+
+      section.nope
+        h1 NOPE
+        pre
+          code.language-javascript.
+            var someNiceThings = [
+              'JavaScript',
+              'Regex',
+              'Kittens',
+            ]
+
+      section
+        h1 More code!
+        pre
+          code.language-javascript.
+            var fs = require('fs')
+
+            require('./eslintout.json').forEach(function(f){
+              fs.readFile(f.filePath, function(err, data){
+                lines = data.toString().split('\n')
+                
+                f.messages.forEach(function(line){
+                  lines[line.line-1] = lines[line.line-1] + ','
+                })
+                
+                fs.writeFile(f.filePath, lines.join('\n'))
+              })
+            })
+
+      section
+        h1 Further Reading
+        h2 
+          a(href="http://eslint.org/docs/rules/comma-dangle.html") http://eslint.org/docs/rules/comma-dangle.html
+        h2
+          a(href="https://github.com/airbnb/javascript#19.2") https://github.com/airbnb/javascript#19.2
+
+      section
+        h1 Thank you!
 
     script(src='build/build.js')

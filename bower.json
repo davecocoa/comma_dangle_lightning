@@ -2,6 +2,8 @@
   "name": "presentation-comma-dangle",
   "version": "0.0.0",
   "dependencies": {
-    "prism": "gh-pages"
+    "prism": "gh-pages",
+    "bespoke-vcr": "~0.1.0",
+    "bespoke-theme-simple-slide": "~0.1.0"
   }
 }
